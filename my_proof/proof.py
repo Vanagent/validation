@@ -16,10 +16,9 @@ class Proof:
         input_data = ''
         for input_filename in os.listdir(self.config['input_dir']):
             input_file = os.path.join(self.config['input_dir'], input_filename)
-            if os.path.splitext(input_file)[1].lower() == '.zip':
-                print(f"Reading file: {input_file}")
-                with open(input_file, 'r') as f:
-                    input_data = json.load(f)
+            print(f"Reading file: {input_file}")
+            with open(input_file, 'r') as f:
+                input_data = json.load(f)
 
         solution_validation = SolutionValidator(self.config)
 
