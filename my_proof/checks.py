@@ -39,7 +39,7 @@ class SolutionValidator:
         
         scores = [self.validate_solution(solution) for solution in input_data]
         print(f"Scores: {scores}")
-        average_score = sum(scores) / len(scores) / 5
+        average_score = max(sum(scores) / len(scores) / 5, 0.1)
         passing_threshold = 0.6
         individual_threshold = 0.8
         
