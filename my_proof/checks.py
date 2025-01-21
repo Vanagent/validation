@@ -49,7 +49,7 @@ class SolutionValidator:
         print(f"All scores pass: {all_scores_pass}, Average passes: {average_passes}")
         return {
             "passed": all_scores_pass and average_passes,
-            "average_score": round(average_score, 2),
+            "average_score": average_score,
             "scores": scores,
             "details": {
                 "all_scores_pass": all_scores_pass,
